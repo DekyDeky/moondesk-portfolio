@@ -1,0 +1,25 @@
+.desktop {
+    height: 100vh;
+    position: relative;
+    
+
+    .desktop-icons {
+        background-image: url('../../assets/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: calc(100% - 75px);
+
+        padding: 1rem;
+
+        display: flex;
+        gap: 15px;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+    }
+}

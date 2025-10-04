@@ -1,0 +1,24 @@
+.desktop-item {
+
+    cursor: pointer;
+    width: 125px;
+    padding: 1rem;
+
+    .desktop-item-icon {
+        width: 100%;
+        height: 80px;
+        filter: var(--white-filter);
+    }
+
+    .dekstop-item-name {
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+
+        margin-top: .5rem;
+    }
+}
+
+.desktop-item:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
