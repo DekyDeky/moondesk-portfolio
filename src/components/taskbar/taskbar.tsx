@@ -1,12 +1,21 @@
+import type { Dispatch, SetStateAction } from 'react';
+
 import './taskbar.scss';
 
 import Logo from '../../assets/taskbar/taskbar-icon.svg';
 import Internet from '../../assets/taskbar/internet-icon.svg'
 
-export default function TaskBar(){
+interface menuProp {
+    showMenu: boolean;
+    setShowMenu: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function TaskBar({showMenu, setShowMenu}: menuProp){
     return(
         <main className='taskbar'>
-            <section className='taskbar-menu_btn'>
+            <section className='taskbar-menu_btn' onClick={() => {
+                setShowMenu(!showMenu);
+            }}>
                 <img className='taskbar-menu_btn-logo taskbar-icon' src={Logo} alt=""/>
             </section>
             <section className='taskbar-apps'>

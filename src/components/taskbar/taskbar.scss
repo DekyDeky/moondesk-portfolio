@@ -12,7 +12,7 @@ $taskbar-sides-hover: linear-gradient(45deg,rgba(102, 95, 95, 1) 30%, rgba(204, 
     align-items: center;
     
     background: $taskbar-bg;
-    height: 75px;
+    height: var(--taskbar-height);
 
     .taskbar-menu_btn::before {
         position: absolute;
