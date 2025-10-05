@@ -44,6 +44,7 @@ $taskbar-sides-hover: linear-gradient(45deg,rgba(102, 95, 95, 1) 30%, rgba(204, 
             display: block;
             margin: auto;
             height: 100%;
+            user-select: none;
         }
     }
 

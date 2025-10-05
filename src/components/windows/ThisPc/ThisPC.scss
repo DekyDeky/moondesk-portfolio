@@ -1,0 +1,84 @@
+.ThisPC {
+
+    padding: 1rem;
+
+    .ThisPC-header {
+
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding-right: .75rem;
+
+        .ThisPC-Icon {
+            width: 200px;
+        }
+
+        .ThisPC-header-text {
+            h4 {
+                font-size: 1.25rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .ThisPC-main {
+
+        .ThisPC-main-text {
+            p {
+                margin: 1rem 0;
+            }
+        }
+
+        .ThisPC-main-media {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 3rem;
+
+            .ThisPC-main-media-item {
+                
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+
+                img {
+                    height: 2.5rem;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .ThisPC-main-conclusion {
+            p {
+                margin: 1rem 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .ThisPC-footer {
+        
+        .ThisPC-footer-Icon {
+            p {
+                display: inline;
+            }
+
+            a {
+                display: inline;
+                color: inherit;
+                font-weight: 700;
+            }
+        }
+    }
+}
