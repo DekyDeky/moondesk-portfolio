@@ -6,6 +6,7 @@ import Menu from "../components/menu/menu";
 import Window from "../components/window/window";
 
 import ThisPC from "../components/windows/ThisPc/ThisPC";
+import Projects from "../components/windows/projects/Projects";
 
 import Computer from '../assets/desktop/computer.svg'
 import Folder from '../assets/desktop/folder.svg'
@@ -18,23 +19,40 @@ import { useState } from "react";
 export default function Desktop(){
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const [showThisPC, setShowThisPC] = useState<boolean>(false);
+    const [showProjects, setShowProjects] = useState<boolean>(false);
 
     return(
             <main className="desktop">
+                
+ 
                 <AnimatePresence>
                     {showMenu && <Menu/>}
+                </AnimatePresence>   
 
+                <AnimatePresence>
                     {showThisPC && <Window 
                         windowName="Este PC" 
-                        width={"750px"} 
-                        height={"600px"}
+                        width={"725px"} 
+                        height={'fit-content'}
                         windowContent={<ThisPC/>} 
                         top={'10%'}
                         left={'30%'}
                         close={setShowThisPC}
                     />   }
-                </AnimatePresence>    
+                </AnimatePresence>
 
+                <AnimatePresence>          
+                    {showProjects && <Window
+                        windowName="Projetos"
+                        width={'100%'}
+                        height={'calc(100% - 8.5rem - 45px)'}
+                        windowContent={<Projects/>}
+                        top={0}
+                        left={0}
+                        close={setShowProjects}
+                        nav={true}
+                    />}
+                </AnimatePresence>  
                 
 
 
@@ -44,11 +62,15 @@ export default function Desktop(){
                     }
                 }} >
 
+
+
                     <div className="column">
                         <div onClick={() => {setShowThisPC(true)}}>
                             <DesktopIcon icon={Computer} name="Este PC" alt="Ícone de um computador"/>
                         </div>
-                        <DesktopIcon icon={Folder} name="Projetos" alt="Ícone de uma pasta"/>
+                        <div onClick={() => {setShowProjects(true)}}>
+                            <DesktopIcon icon={Folder} name="Projetos" alt="Ícone de uma pasta"/>
+                        </div>
                         <DesktopIcon icon={Blog} name="Blog" alt="Ícone de uma página web"/>
                     </div>
                     <div className="column">    

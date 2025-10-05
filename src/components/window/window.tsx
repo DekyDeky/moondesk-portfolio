@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
 
 import Close from '../../assets/window/close.svg'
+import ArrowRight from '../../assets/window/arrow-right.svg'
+import ArrowLeft from '../../assets/window/arrow-left.svg'
+import MagGlass from '../../assets/window/mag-glass.svg'
 
 import './window.scss';
 
@@ -12,9 +15,10 @@ interface windowProps {
     top: number | string;
     left: number | string;
     close: React.Dispatch<React.SetStateAction<boolean>>;
+    nav?: boolean
 }
 
-export default function Window({windowName, windowContent, width, height, top, left, close}: windowProps){
+export default function Window({windowName, windowContent, width, height, top, left, close, nav = false}: windowProps){
 
 
 
@@ -32,10 +36,24 @@ export default function Window({windowName, windowContent, width, height, top, l
             exit={{opacity: 0, scale: 0}}
         >
             <header className='window-tab'>
-                <h4 className='window-tab-name'>{windowName}</h4>
-                <div onClick={() => close(false)}>
-                    <img className='window-tab-close' src={Close} alt="" />
+                <div className='window-tab-title'>
+                    <h4 className='window-tab-name'>{windowName}</h4>
+                    <div onClick={() => close(false)}>
+                        <img className='window-tab-close' src={Close} alt="" />
+                    </div>
                 </div>
+                {nav && (
+                    <div className='window-tab-nav'>
+                        <img className='window-tab-nav-arrow' src={ArrowLeft} alt="" />
+                        <img className='window-tab-nav-arrow' src={ArrowRight} alt="" />
+                        <div className='window-tab-nav-search'>
+                            <h4>
+                                :3\desktop\Projetos
+                            </h4>
+                        </div>
+                        <img className='window-tab-nav-searchbtn' src={MagGlass} alt="" />
+                    </div>
+                )}
             </header>
             <div className="window-border">
                 <main className='window-content'>
