@@ -7,7 +7,7 @@ import './App.scss'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/moondesk-portfolio">
       <Routes>
           <Route path="/" element={<Desktop />}/>
       </Routes>
