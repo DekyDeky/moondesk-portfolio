@@ -1,0 +1,43 @@
+$tab-bg: linear-gradient(180deg,rgba(115, 115, 115, 1) 0%, rgba(217, 217, 217, 1) 100%);
+$border-color: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(102, 102, 102, 1) 100%);
+
+.window {
+
+    position: absolute;
+    z-index: 9;
+
+
+    .window-tab {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: $tab-bg;
+
+        padding: 0 1rem;
+
+        height: 50px;
+
+        .window-tab-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .window-tab-close {
+            background-color: transparent;
+            width: 40px;
+        }
+    }
+
+    .window-border {
+        background: $border-color;
+        padding: 5px;
+        height: 100%;
+    }
+
+    .window-content {
+        background-color: white;
+        height: 100%;
+    }
+}
