@@ -1,7 +1,7 @@
 import { motion } from "motion/react"
 
 import UserPhoto from '../../assets/menu/user.jpg';
-import Warn from '../../assets/menu/warn.svg';
+import Warn from '../../assets/warn.svg';
 import Shutdown from '../../assets/menu/shutdown.svg';
 
 import './menu.scss'
