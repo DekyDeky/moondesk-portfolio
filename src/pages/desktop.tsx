@@ -23,8 +23,7 @@ export default function Desktop(){
             <main className="desktop">
                 <AnimatePresence>
                     {showMenu && <Menu/>}
-                </AnimatePresence>
-                
+
                     {showThisPC && <Window 
                         windowName="Este PC" 
                         width={"750px"} 
@@ -34,7 +33,7 @@ export default function Desktop(){
                         left={'30%'}
                         close={setShowThisPC}
                     />   }
-                    
+                </AnimatePresence>    
 
                 
 

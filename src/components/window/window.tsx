@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 import Close from '../../assets/window/close.svg'
 
 import './window.scss';
@@ -24,7 +26,11 @@ export default function Window({windowName, windowContent, width, height, top, l
     }
 
     return (
-        <main className='window'  style={widthWindow}>
+        <motion.main className='window'  style={widthWindow}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{opacity: 0, scale: 0}}
+        >
             <header className='window-tab'>
                 <h4 className='window-tab-name'>{windowName}</h4>
                 <div onClick={() => close(false)}>
@@ -36,6 +42,6 @@ export default function Window({windowName, windowContent, width, height, top, l
                     {windowContent}
                 </main>
             </div>
-        </main>
+        </motion.main>
     )
 }
