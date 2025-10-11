@@ -15,7 +15,7 @@ interface windowProps {
     top: number | string;
     left: number | string;
     close: React.Dispatch<React.SetStateAction<boolean>>;
-    nav?: boolean
+    nav?: boolean;
 }
 
 export default function Window({windowName, windowContent, width, height, top, left, close, nav = false}: windowProps){
@@ -33,6 +33,7 @@ export default function Window({windowName, windowContent, width, height, top, l
         <motion.main className='window'  style={widthWindow}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", bounce: 0 }}
             exit={{opacity: 0, scale: 0}}
         >
             <header className='window-tab'>
@@ -48,7 +49,7 @@ export default function Window({windowName, windowContent, width, height, top, l
                         <img className='window-tab-nav-arrow' src={ArrowRight} alt="" />
                         <div className='window-tab-nav-search'>
                             <h4>
-                                :3\desktop\Projetos
+                                :3\desktop\{windowName}
                             </h4>
                         </div>
                         <img className='window-tab-nav-searchbtn' src={MagGlass} alt="" />
