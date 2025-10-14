@@ -42,8 +42,6 @@ export default function Desktop(){
                             width={"500px"}
                             height={"fit-content"}
                             windowContent={<UnderConstruct/>}
-                            top={'25%'}
-                            left={'30%'}
                             close={setShowWarn}
                         />
                     }
@@ -56,8 +54,6 @@ export default function Desktop(){
                         width={"725px"} 
                         height={'fit-content'}
                         windowContent={<ThisPC/>} 
-                        top={'10%'}
-                        left={'30%'}
                         close={setShowThisPC}
                     />   }
                 </AnimatePresence>
@@ -69,8 +65,6 @@ export default function Desktop(){
                         width={'100%'}
                         height={'calc(100% - 8.5rem - 45px)'}
                         windowContent={<Projects/>}
-                        top={0}
-                        left={0}
                         close={setShowProjects}
                         nav={true}
                     />}
@@ -80,10 +74,8 @@ export default function Desktop(){
                     {showFriend && <Window
                         windowName="Fábio - Amigo"
                         width={'100%'}
-                        height={'calc(100% - 8rem'}
+                        height={'calc(100% - 8.1rem'}
                         windowContent={<Friend/>}
-                        top={0}
-                        left={0}
                         close={setShowFriend}
                     />}
                 </AnimatePresence>
@@ -105,7 +97,7 @@ export default function Desktop(){
                             <DesktopIcon icon={Folder} name="Projetos" alt="Ícone da pasta de Projetos"/>
                         </div>
                         <div onClick={() => {setShowWarn(true)}}>
-                            <DesktopIcon icon={Folder} name="Jogos" alt="Ícone da pasta de Jogos"/>
+                            <DesktopIcon icon={Folder} name="O Autor" alt="Ícone da pasta do Autor"/>
                         </div>
                     </div>
                     <div className="column">    

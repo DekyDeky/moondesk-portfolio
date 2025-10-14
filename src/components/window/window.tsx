@@ -12,25 +12,34 @@ interface windowProps {
     windowContent: React.ReactElement;
     width: number | string;
     height: number | string;
-    top: number | string;
-    left: number | string;
     close: React.Dispatch<React.SetStateAction<boolean>>;
     nav?: boolean;
 }
 
-export default function Window({windowName, windowContent, width, height, top, left, close, nav = false}: windowProps){
+export default function Window({windowName, windowContent, width, height, close, nav = false}: windowProps){
 
 
 
     const widthWindow: React.CSSProperties = {
         width,
         height,
-        top: top,
-        left: left
     }
 
+    const centralizeWindow: React.CSSProperties = {
+        left: 0, 
+        right: 0, 
+        top: 0,
+        bottom: 0,
+        margin: 'auto',
+    }
+
+    const finalStyle: React.CSSProperties = {
+        ...widthWindow,
+        ...(width !== '100%' ? centralizeWindow : {}),
+    };
+
     return (
-        <motion.main className='window'  style={widthWindow}
+        <motion.main className='window' style={finalStyle}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", bounce: 0 }}
@@ -46,7 +55,7 @@ export default function Window({windowName, windowContent, width, height, top, l
                 {nav && (
                     <div className='window-tab-nav'>
                         <img className='window-tab-nav-arrow' src={ArrowLeft} alt="" />
-                        <img className='window-tab-nav-arrow' src={ArrowRight} alt="" />
+                        <img className='window-tab-nav-arrow right-arrow' src={ArrowRight} alt="" />
                         <div className='window-tab-nav-search'>
                             <h4>
                                 :3\desktop\{windowName}

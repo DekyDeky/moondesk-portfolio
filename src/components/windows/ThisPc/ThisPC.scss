@@ -1,3 +1,72 @@
+@media screen and (max-width: 480px){
+    .ThisPC {
+
+        overflow:scroll;
+        overflow-x:hidden;
+
+        height: 400px;
+
+        .ThisPC-Icon {
+            
+        }
+
+        .ThisPC-header-text {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        .ThisPC-main-media {
+            flex-direction: column;
+
+            img {
+                height: 2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .ThisPC {
+
+
+        .ThisPC-header-text {
+            h4 {
+                font-size: 1.25rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .ThisPC-main-media {
+            justify-content: space-between;
+
+
+            img {
+                height: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }  
+}
+
 .ThisPC {
 
     padding: .5rem 1rem;
@@ -10,21 +79,12 @@
         padding-right: .75rem;
 
         .ThisPC-Icon {
-            width: 10vw;
+            width: 175px;
         }
 
         .ThisPC-header-text {
-            h4 {
-                font-size: 1.25rem;
-            }
-
             h1 {
-                font-size: 2rem;
                 font-weight: 700;
-            }
-
-            h3 {
-                font-size: 1.5rem;
             }
         }
     }
@@ -39,7 +99,7 @@
 
         .ThisPC-main-media {
             display: flex;
-            justify-content: space-between;
+
             margin: 0 3rem;
 
             .ThisPC-main-media-item {
@@ -48,14 +108,10 @@
                 align-items: center;
                 gap: .5rem;
 
-                img {
-                    height: 2.5rem;
-                }
-
                 h3 {
-                    font-size: 1.5rem;
                     font-weight: 700;
                 }
+
             }
         }
 

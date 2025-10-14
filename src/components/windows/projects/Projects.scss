@@ -1,5 +1,12 @@
 $description-bg: linear-gradient(180deg,rgba(217, 217, 217, 1) 0%, rgba(102, 102, 102, 1) 15%);
 
+
+@media screen and (max-width: 480px){
+    .projects-description {
+        display: none;
+    }
+}
+
 .projects {
 
     display: flex;
